@@ -1,0 +1,6 @@
+.stage
+/linux*
+debian/linux
+debian/.debhelper
+config
+x86_64_defconfig

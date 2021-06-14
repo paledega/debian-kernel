@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ $1 == build ]] ; then
+    bash build.sh
+else
+    dh $@
+fi
