@@ -1,7 +1,7 @@
 Source: linux
 Section: utils
 Priority: optional
-Maintainer: Ali Rıza KESKIN <parduscix@yandex.ru>
+Maintainer: Ali Riza KESKIN <parduscix@yandex.ru>
 Build-Depends: make
 Standards-Version: 4.3.0
 Homepage: https://example.org

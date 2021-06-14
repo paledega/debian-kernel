@@ -65,4 +65,5 @@ if [[ $stage -lt 4 ]] ; then
     find -L "$builddir" -type l -printf 'Removing %P\n' -delete
     find "$builddir" -type f -name '*.o' -printf 'Removing %P\n' -delete
     ln -s "../../lib/modules/${VERSION}/build" "$pkgdir/usr/src/linux-headers-${VERSION}"
+    echo 4 > ../.stage
 fi
