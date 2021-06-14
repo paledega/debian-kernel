@@ -3,4 +3,6 @@
 debian/linux
 debian/.debhelper
 config
+.config
 x86_64_defconfig
+debian/linux.debhelper.log

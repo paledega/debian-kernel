@@ -41,7 +41,7 @@ if [[ $stage -lt 4 ]] ; then
     install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
     ln -s ../lib/modules/${VERSION}/vmlinuz $pkgdir/boot/vmlinuz-${VERSION}
     # install modules
-    make INSTALL_MOD_PATH="$pkgdir" INSTALL_MOD_STRIP=1 modules_install
+    make INSTALL_MOD_PATH="$pkgdir" INSTALL_MOD_STRIP=1 modules_install -j$(nproc)
     rm "$modulesdir"/{source,build} || true
     # install build directories
     install -Dt "$builddir" -m644 Makefile Module.symvers System.map vmlinux || true
