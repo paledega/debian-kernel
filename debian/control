@@ -7,7 +7,7 @@ Standards-Version: 4.3.0
 Homepage: https://example.org
 
 Package: linux
-Architecture: all
+Architecture: amd64
 Depends: ${misc:Depends}, libc6
 Description: The linux kernel
  linux kernel for debian gnu/linux

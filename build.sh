@@ -39,7 +39,7 @@ mkdir -p $pkgdir/boot $pkgdir/usr/src $modulesdir || true
 if [[ $stage -lt 4 ]] ; then
     # install bzImage
     install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
-    ln -s ../../boot/vmlinuz-${VERSION}
+    ln -s ../lib/modules/${VERSION}/vmlinuz $pkgdir/boot/vmlinuz-${VERSION}
     # install modules
     make INSTALL_MOD_PATH="$pkgdir" INSTALL_MOD_STRIP=1 modules_install
     rm "$modulesdir"/{source,build} || true
