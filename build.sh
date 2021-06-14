@@ -14,9 +14,8 @@ fi
 # Stage 2: Generate config
 if [[ $stage -lt 2 ]] ; then
     # Config generate
-    cp linux-${VERSION}/arch/x86/configs/x86_64_defconfig x86_64_defconfig 
-    bash genconfig.sh
-    mv config-new linux-${VERSION}/.config
+    wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/linux/trunk/config 
+    mv config linux-${VERSION}/.config
     rm -f x86_64_defconfig config
     echo 2 > .stage
 fi
