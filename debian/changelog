@@ -1,3 +1,9 @@
+linux (5.14.9) unstable; urgency=medium
+
+  * update
+
+ -- Ali Rıza KESKIN <parduscix@yandex.ru>  Mon, 14 Jun 2021 03:11:19 +0300
+
 linux (5.12.10) unstable; urgency=medium
 
   * Initial commit

@@ -7,7 +7,7 @@ if [[ $1 == clean ]] ; then
     rm -rvf linux-${VERSION}.tar.xz  || true
     rm -fv .stage || true
     dh clean
-elif [[ $1 == binary-arch ]] ; then
+elif [[ $1 == binary ]] ; then
     bash build.sh
     dh_strip -a
     dh_makeshlibs -a
