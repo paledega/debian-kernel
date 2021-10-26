@@ -14,8 +14,7 @@ fi
 # Stage 2: Generate config
 if [[ $stage -lt 2 ]] ; then
     # Config generate
-    wget https://salsa.debian.org/kernel-team/linux/-/raw/master/debian/config/amd64/config 
-    mv config linux-${VERSION}/.config
+    cp config linux-${VERSION}/.config
     rm -f x86_64_defconfig config
     echo 2 > .stage
 fi
