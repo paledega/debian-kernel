@@ -15,7 +15,7 @@ fi
 if [[ $stage -lt 2 ]] ; then
     # Config generate
     cp config linux-${VERSION}/.config
-    rm -f x86_64_defconfig config
+    rm -f x86_64_defconfig
     echo 2 > .stage
 fi
 
