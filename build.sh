@@ -31,6 +31,7 @@ fi
 
 # Stage 4: Install source code (Like archlinux)
 pkgdir=../debian/linux
+mkdir -p $pkgdir
 modulesdir=${pkgdir}/lib/modules/${VERSION}
 builddir="$pkgdir/lib/modules/${VERSION}/build"
 mkdir -p $pkgdir/boot $pkgdir/usr/src $modulesdir || true
