@@ -14,6 +14,6 @@ jobs:
       - name: build
         run: |
           sudo apt update
-          sudo apt install devscripts equvis -yq
+          sudo apt install devscripts equivs -yq
           yes | sudo mk-build-deps -i
           sudo dpkg-buildpackage -b
