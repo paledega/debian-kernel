@@ -8,7 +8,7 @@ fi
 # fetch source
 wget -c https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${VERSION}.tar.xz
 # extrack if directory not exists
-[[ -d linux-${VERSION} ]] || tar -xvf linux-${VERSION}.tar.xz
+[[ -d linux-${VERSION} ]] || tar -xf linux-${VERSION}.tar.xz
 echo 1 > .stage
 
 
