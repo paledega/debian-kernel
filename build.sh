@@ -1,7 +1,9 @@
 #!/bin/bash
 set -ex
 export VERSION=$(cat debian/changelog | head -n 1 | sed "s/.*(//g" | sed "s/).*//g")
-
+if echo ${VERSION} | grep -e "\.0$" ; then
+    export VERSION=${VERSION::-2}
+fi
 # Stage 1: Get version and fetch source code
 # fetch source
 wget -c https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${VERSION}.tar.xz
